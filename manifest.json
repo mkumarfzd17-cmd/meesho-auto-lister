@@ -1,0 +1,1 @@
+{"manifest_version": 3, "name": "Meesho Auto Lister", "version": "1.0.0", "description": "Automate bulk product listing on Meesho", "permissions": ["activeTab", "scripting", "storage"], "host_permissions": ["https://supplier.meesho.com/*"], "action": {"default_popup": "popup.html", "default_title": "Meesho Auto Lister"}, "background": {"service_worker": "background.js"}}
