@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    color: #667eea;
+    border-bottom-color: #667eea;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.upload-area {
+    border: 3px dashed #667eea;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #f8f9ff;
+}
+
+.upload-area:hover {
+    background: #f0f1ff;
+    border-color: #764ba2;
+}
+
+.upload-area p {
+    font-size: 16px;
+    color: #667eea;
+    margin: 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin: 5px 0;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #f0f1ff;
+    color: #667eea;
+    margin: 5px 0;
+}
+
+.btn-secondary:hover {
+    background: #e8ebff;
+}
+
+#fileInfo {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0f1ff;
+    border-radius: 5px;
+}
+
+#fileName {
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#preview {
+    margin-top: 20px;
+}
+
+#previewTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#previewTable th, #previewTable td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#previewTable th {
+    background: #667eea;
+    color: white;
+}
+
+#previewTable tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+#progress {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+#progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    width: 0%;
+    transition: width 0.3s;
+}
+
+#progressText {
+    font-size: 12px;
+    color: #999;
+    margin: 10px 0;
+}
+
+#logs {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 11px;
+    font-family: monospace;
+}
+
+.log-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.log-item.success {
+    color: #28a745;
+}
+
+.log-item.error {
+    color: #dc3545;
+}
+
+.log-item.info {
+    color: #667eea;
+}
+
+.setting-group {
+    margin-bottom: 20px;
+}
+
+.setting-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.setting-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#settingMessage {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#settingMessage.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+#settingMessage.error {
+    background: #f8d7da;
+    color: #721c24;
+}
